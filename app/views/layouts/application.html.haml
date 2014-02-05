@@ -1,0 +1,119 @@
+!!! 5
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %title Ivan Ukhov
+    %link{ href: '/favicon.png', rel: 'icon', type: 'image/png' }
+    %script{ type: 'text/javascript', src:'//use.typekit.net/bas4cfe.js' }
+    %script{ type: 'text/javascript' }= 'try{Typekit.load();}catch(e){}'
+    = stylesheet_link_tag :application
+  %body
+    #page
+      %article
+        %header
+          %h1 Ukhov
+
+          #contact
+            %p ivan.ukhov@liu.se
+            %p +46 (0) 13 281470
+            %p Office 3D:439, Building B, Campus Valla, Linköping
+
+        %section
+          %h1 Education
+          %ul
+            %li
+              :markdown
+                **Doctor of Philosophy in Computer Systems**
+
+                Department of Computer and Information Science, Linköping University, Sweden
+
+              %aside.left.inactive
+                %p 2016
+                %p not yet
+
+            %li
+              :markdown
+                **Master of Science in Computer Engineering** with _honors_
+
+                Department of Informational and Control Systems, Saint Petersburg State Polytechnic University, Russia
+
+              %aside.left 2010
+
+            %li
+              :markdown
+                **Specialist in Business Management** with _honors_
+
+                International Graduate School of Management, Saint Petersburg State Polytechnic University, Russia
+
+            %li
+              :markdown
+                **Bachelor of Science in Computer Engineering** with _honors_
+
+                Department of Informational and Control Systems, Saint Petersburg State Polytechnic University, Russia
+
+              %aside.left 2008
+
+        %section
+          %h1 Research Interests
+          %p Uncertainty quantification for electronic system design.
+
+        %section
+          %h1 Publications
+          %ul
+            %li
+              :markdown
+                **Probabilistic Analysis of Power and Temperature Under Process Variation for Electronic System Design** with _Petru Eles_ and _Zebo Peng_
+
+                IEEE Transactions on Computer-aided Design of Integrated Circuits and Systems
+
+              %aside.left 2014
+
+            %li
+              :markdown
+                **Statistical Analysis of Process Variation Based on Indirect Measurements for Electronic System Design** with _Mattias Villani_, _Petru Eles_, and _Zebo Peng_
+
+                Asia and South Pacific Design Automation Conference
+
+            %li
+              :markdown
+                **Steady-state Dynamic Temperature Analysis and Reliability Optimization for Embedded Multiprocessor Systems** with _Min Bao_, _Petru Eles_, and _Zebo Peng_
+
+                Design Automation Conference
+
+              %aside.left 2012
+
+        %section
+          %h1
+            :markdown
+              Teaching Assistance _at Linköping University_
+
+          %ul
+            %li
+              :markdown
+                **Design Patterns**
+
+                TDDB84, autumn 2013
+
+            %li
+              :markdown
+                **Distributed Systems**
+
+                TDDD25, spring 2012&ndash;2014
+
+            %li
+              :markdown
+                **Embedded Systems Design**
+
+                TDDI08, spring 2013
+
+            %li
+              :markdown
+                **System Design and Methodologies**
+
+                TDTS07, spring 2012
+
+        %footer
+          :markdown
+            Love, Ivan
+
+            _&#10086;_

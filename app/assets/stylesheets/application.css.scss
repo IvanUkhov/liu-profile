@@ -1,0 +1,132 @@
+$active-color: #000;
+$inactive-color: #ccc;
+$thin-weight: 100;
+$light-weight: 300;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+em, strong {
+  font-style: normal;
+  font-weight: normal;
+}
+
+html {
+  font-size: 17.6pt;
+  font-family: 'adobe-caslon-pro', times, serif;
+  color: $active-color;
+}
+
+#page {
+  width: 760pt;
+  margin: 0 auto;
+}
+
+article {
+  padding: 0 30pt;
+  margin-left: 100pt;
+  border-right: 100pt solid rgb(102,255,204);
+}
+
+h1, footer, aside {
+  font-family: 'proxima-nova', verdana, sans-serif;
+}
+
+aside {
+  -webkit-font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
+  font-weight: $light-weight;
+
+  width: 100pt;
+  text-align: right;
+
+  &.left {
+    position: absolute;
+    left: -140pt;
+    top: 0;
+  }
+
+  &.inactive {
+    color: $inactive-color;
+    font-weight: $thin-weight;
+  }
+
+  p:last-child {
+    font-size: 12.5pt;
+  }
+}
+
+article > header {
+  h1 {
+    font-size: 80pt;
+    font-weight: $thin-weight;
+    padding-top: 30pt;
+  }
+
+  #contact {
+  }
+}
+
+section > h1 {
+  font-size: 24pt;
+  font-weight: $light-weight;
+  margin: 24pt 0 8pt 0;
+
+  em {
+    color: $inactive-color;
+    font-weight: $thin-weight;
+    font-size: 14pt;
+  }
+}
+
+section > p {
+  padding-bottom: 12pt;
+}
+
+ul li {
+  font-size: 16pt;
+  position: relative;
+
+  & > p:first-child {
+    padding-bottom: 4pt;
+    line-height: 21.6pt;
+  }
+
+  & > p:last-child {
+    padding-bottom: 12pt;
+    line-height: 19.2pt;
+  }
+
+  strong {
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  em {
+    font-variant: small-caps;
+    letter-spacing: 1pt;
+    white-space: nowrap;
+  }
+}
+
+footer {
+  font-size: 16pt;
+  text-align: center;
+  padding: 40pt 0;
+  font-weight: $thin-weight;
+
+  em {
+    font-size: 58pt;
+  }
+
+  p:last-child {
+    padding-top: 10pt;
+  }
+}
