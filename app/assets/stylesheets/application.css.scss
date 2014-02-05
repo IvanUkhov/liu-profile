@@ -1,4 +1,4 @@
-$active-color: #000;
+$active-color: rgb(102,255,204);
 $inactive-color: #ccc;
 $thin-weight: 100;
 $light-weight: 300;
@@ -17,10 +17,33 @@ em, strong {
   font-weight: normal;
 }
 
+a {
+  display: block;
+}
+
+a, a:hover, a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+::selection {
+  background-color: $active-color;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: $active-color;
+  color: #fff;
+}
+
 html {
   font-size: 17.6pt;
   font-family: 'adobe-caslon-pro', times, serif;
-  color: $active-color;
+  color: #000;
 }
 
 #page {
@@ -31,31 +54,47 @@ html {
 article {
   padding: 0 30pt;
   margin-left: 100pt;
-  border-right: 100pt solid rgb(102,255,204);
+  border-right: 100pt solid $active-color;
 }
 
-h1, footer, aside {
+header, footer, h1, aside {
   font-family: 'proxima-nova', verdana, sans-serif;
 }
 
 aside {
-  -webkit-font-feature-settings: 'tnum';
-  -moz-font-feature-settings: 'tnum';
-  -ms-font-feature-settings: 'tnum';
-  font-weight: $light-weight;
-
+  position: absolute;
+  top: 0;
   width: 100pt;
-  text-align: right;
 
   &.left {
-    position: absolute;
     left: -140pt;
-    top: 0;
+    text-align: right;
   }
+
+  &.right {
+    right: -140pt;
+    color: #fff;
+    font-size: 14pt;
+    font-weight: $thin-weight;
+  }
+
+  -moz-font-feature-settings: "lnum" 1, "tnum" 1;
+  -moz-font-feature-settings: "lnum=1, tnum=1";
+  -ms-font-feature-settings: "lnum" 1, "tnum" 1;
+  -o-font-feature-settings: "lnum" 1, "tnum" 1;
+  -webkit-font-feature-settings: "lnum" 1, "tnum" 1;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+
+  font-weight: $light-weight;
+  white-space: nowrap;
 
   &.inactive {
     color: $inactive-color;
     font-weight: $thin-weight;
+  }
+
+  p:first-child {
+    letter-spacing: 1pt;
   }
 
   p:last-child {
@@ -64,13 +103,41 @@ aside {
 }
 
 article > header {
+  padding: 20pt 0 25pt 0;
+  position: relative;
+
   h1 {
+    position: relative;
     font-size: 80pt;
     font-weight: $thin-weight;
-    padding-top: 30pt;
+
+    em {
+      position: absolute;
+      width: 240pt;
+      left: -280pt;
+      top: 0;
+      text-align: right;
+      font-weight: $thin-weight;
+    }
   }
 
   #contact {
+    position: absolute;
+    width: 180pt;
+    right: 0;
+    top: 50pt;
+    font-weight: $light-weight;
+    font-size: 14pt;
+    line-height: 16pt;
+    white-space: nowrap;
+
+    p {
+      padding-bottom: 6pt;
+    }
+  }
+
+  aside {
+    top: 50pt;
   }
 }
 
@@ -94,12 +161,12 @@ ul li {
   font-size: 16pt;
   position: relative;
 
-  & > p:first-child {
+  & > p:nth-child(1) {
     padding-bottom: 4pt;
     line-height: 21.6pt;
   }
 
-  & > p:last-child {
+  & > p:nth-child(2) {
     padding-bottom: 12pt;
     line-height: 19.2pt;
   }
@@ -119,7 +186,7 @@ ul li {
 footer {
   font-size: 16pt;
   text-align: center;
-  padding: 40pt 0;
+  padding: 40pt 0 20pt 0;
   font-weight: $thin-weight;
 
   em {

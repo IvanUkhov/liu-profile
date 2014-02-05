@@ -11,12 +11,17 @@
     #page
       %article
         %header
-          %h1 Ukhov
+          %h1
+            :markdown
+              _Ivan_ Ukhov
 
           #contact
-            %p ivan.ukhov@liu.se
+            %p#email-line ivan.ukhov at liu.se
             %p +46 (0) 13 281470
-            %p Office 3D:439, Building B, Campus Valla, Linköping
+            %p Office 3D:439, Building B,<br/>Campus Valla, Linköping
+
+          %aside.right
+            %a#email-link{ href: '#' } contact
 
         %section
           %h1 Education
@@ -74,6 +79,10 @@
 
                 Asia and South Pacific Design Automation Conference
 
+              %aside.right
+                %a{ href: 'publications/SAPV-ASP-DAC-2014.pdf' } read
+                %a{ href: 'publications/SAPV-ASP-DAC-2014.bib' } cite
+
             %li
               :markdown
                 **Steady-state Dynamic Temperature Analysis and Reliability Optimization for Embedded Multiprocessor Systems** with _Min Bao_, _Petru Eles_, and _Zebo Peng_
@@ -81,6 +90,9 @@
                 Design Automation Conference
 
               %aside.left 2012
+              %aside.right
+                %a{ href: 'publications/SSDTA-DAC-2012.pdf' } read
+                %a{ href: 'publications/SSDTA-DAC-2012.bib' } cite
 
         %section
           %h1
@@ -117,3 +129,5 @@
             Love, Ivan
 
             _&#10086;_
+
+    = javascript_include_tag :application
