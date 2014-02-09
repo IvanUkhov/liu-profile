@@ -1,7 +1,8 @@
-$active-color: rgb(102,255,204);
+$active-color: #6fc;
 $inactive-color: #ccc;
 $thin-weight: 100;
 $light-weight: 300;
+$regular-weight: 400;
 
 * {
   margin: 0;
@@ -30,6 +31,11 @@ a:hover {
   text-decoration: underline;
 }
 
+a[href^=tel] {
+  color: #000;
+  text-decoration: none;
+}
+
 ::selection {
   background-color: $active-color;
   color: #fff;
@@ -41,8 +47,9 @@ a:hover {
 }
 
 html {
-  font-size: 17.6pt;
-  font-family: 'adobe-caslon-pro', times, serif;
+  font-size: 18pt;
+  font-family: 'calluna', times, serif;
+  font-weight: $regular-weight;
   color: #000;
 }
 
@@ -75,7 +82,6 @@ aside {
     right: -140pt;
     color: #fff;
     font-size: 14pt;
-    font-weight: $thin-weight;
   }
 
   -moz-font-feature-settings: "lnum" 1, "tnum" 1;
@@ -103,7 +109,7 @@ aside {
 }
 
 article > header {
-  padding: 10pt 0 25pt 0;
+  padding: 10pt 0 40pt 0;
   position: relative;
 
   h1 {
@@ -144,17 +150,13 @@ article > header {
 section > h1 {
   font-size: 24pt;
   font-weight: $light-weight;
-  margin: 24pt 0 8pt 0;
-
-  em {
-    color: $inactive-color;
-    font-weight: $thin-weight;
-    font-size: 14pt;
-  }
+  margin: 30pt 0 8pt 0;
 }
 
 section > p {
-  padding-bottom: 12pt;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  padding-bottom: 14pt;
 }
 
 ul li {
@@ -167,8 +169,15 @@ ul li {
   }
 
   & > p:nth-child(2) {
-    padding-bottom: 12pt;
-    line-height: 19.2pt;
+    padding-bottom: 16pt;
+    line-height: 20pt;
+
+    -moz-font-feature-settings: "lnum" 1;
+    -moz-font-feature-settings: "lnum=1";
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
   }
 
   strong {
@@ -201,10 +210,6 @@ footer {
 
 #windows {
   aside {
-    &.right {
-      font-weight: $light-weight;
-    }
-
     &.inactive {
       font-weight: $light-weight;
     }

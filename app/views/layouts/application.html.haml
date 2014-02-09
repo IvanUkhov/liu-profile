@@ -1,19 +1,25 @@
 !!! 5
-%html{ lang: 'en' }
+%html{ lang: 'en', prefix: 'og: http://ogp.me/ns# profile: http://ogp.me/ns/profile#' }
   %head
     %meta{ charset: 'utf-8' }
+    %meta{ name: 'description', content: 'Academic profile of Ivan Ukhov including education, teaching, reseach interests, and publications.' }
+    %meta{ property: 'og:url', content: 'http://www.ida.liu.se/~ivauk83/' }
+    %meta{ property: 'og:title', content: 'Ivan Ukhov' }
+    %meta{ property: 'og:type', content: 'profile' }
+    %meta{ property: 'og:description', content: 'Academic profile of Ivan Ukhov including education, teaching, reseach interests, and publications.' }
+    %meta{ property: 'profile:first_name', content: 'Ivan' }
+    %meta{ property: 'profile:last_name', content: 'Ukhov' }
+    %meta{ property: 'profile:gender', content: 'male' }
     %title Ivan Ukhov
-    %link{ href: '/favicon.png', rel: 'icon', type: 'image/png' }
+    %link{ href: 'favicon.png', rel: 'icon', type: 'image/png' }
     %script{ type: 'text/javascript', src:'//use.typekit.net/bas4cfe.js' }
     %script{ type: 'text/javascript' }= 'try{Typekit.load();}catch(e){}'
-    = stylesheet_link_tag :application
+    %link{ href: 'assets/application.css', media: 'screen', rel: 'stylesheet' }
   %body
     #page
       %article
         %header
-          %h1
-            :markdown
-              _Ivan_ Ukhov
+          %h1 <em>Ivan</em> Ukhov
 
           #contact
             %p#email-line ivan.ukhov at liu.se
@@ -30,7 +36,7 @@
               :markdown
                 **Doctor of Philosophy in Computer Systems**
 
-                Department of Computer and Information Science, Linköping University, Sweden
+                Embedded Systems Laboratory, Department of Computer and Information Science, Linköping University, Sweden
 
               %aside.left.inactive
                 %p 2016
@@ -60,7 +66,7 @@
 
         %section
           %h1 Research Interests
-          %p Uncertainty quantification for electronic system design.
+          %p Uncertainty quantification for electronic system design
 
         %section
           %h1 Publications
@@ -95,9 +101,7 @@
                 %a{ href: 'publications/SSDTA-DAC-2012.bib' } cite
 
         %section
-          %h1
-            :markdown
-              Teaching Assistance _at Linköping University_
+          %h1 Teaching Assistance
 
           %ul
             %li
@@ -130,4 +134,4 @@
 
             _&#10086;_
 
-    = javascript_include_tag :application
+    %script{ src:'assets/application.js', type: 'text/javascript' }
