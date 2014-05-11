@@ -15,6 +15,15 @@
     %script{ type: 'text/javascript', src:'//use.typekit.net/bas4cfe.js' }
     %script{ type: 'text/javascript' }= 'try{Typekit.load();}catch(e){}'
     %link{ href: 'assets/application.css', media: 'screen', rel: 'stylesheet' }
+    %script{ type: 'text/javascript' }
+      :plain
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-47932672-3', 'liu.se');
+        ga('send', 'pageview');
   %body
     #page
       %article
@@ -22,12 +31,11 @@
           %h1 <em>Ivan</em> Ukhov
 
           #contact
-            %p#email-line ivan.ukhov at liu.se
+            %p &#105;&#118;&#97;&#110;&#46;&#117;&#107;&#104;&#111;&#118;&#64;&#108;&#105;&#117;&#46;&#115;&#101;
             %p +46 (0) 13 281470
             %p Office 329:228, Building B,<br/>Campus Valla, Linköping
 
-          %aside.right
-            %a#email-link{ href: '#' } contact
+          %aside.right <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#118;&#97;&#110;&#46;&#117;&#107;&#104;&#111;&#118;&#64;&#108;&#105;&#117;&#46;&#115;&#101;'>contact</a>
 
         %section
           %h1 Education
@@ -66,7 +74,7 @@
 
         %section
           %h1 Research Interests
-          %p Uncertainty quantification for electronic system design
+          %p Uncertainty quantification for electronic system design.
 
         %section
           %h1 Publications
@@ -137,4 +145,6 @@
 
             _&#10086;_
 
-    %script{ src:'assets/application.js', type: 'text/javascript' }
+    %script{ type: 'text/javascript' }
+      :plain
+        (function() { if (navigator.appVersion.indexOf('Win') != -1) { document.body.setAttribute('id', 'windows'); } })();
