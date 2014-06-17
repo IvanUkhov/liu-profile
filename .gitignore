@@ -1,6 +1,4 @@
-.DS_Store
-.bundle
-tmp/*
-log/*
 *.swp
-public/*
+.DS_Store
+Gemfile.lock
+public/publications/*.pdf
