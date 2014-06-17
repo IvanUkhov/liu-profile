@@ -9,7 +9,7 @@ class Application
     case env['PATH_INFO']
     when '/'
       pipeline = build_pipeline(env)
-      [ 200, {}, [ pipeline['application.html'].to_s ] ]
+      [ 200, {}, pipeline['application.html'] ]
     when /^.+(css)$/
       pipeline = build_pipeline(env)
       pipeline.call(env)

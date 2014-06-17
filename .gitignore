@@ -2,3 +2,5 @@
 .DS_Store
 Gemfile.lock
 public/publications/*.pdf
+public/*.css
+public/*.html
