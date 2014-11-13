@@ -161,6 +161,12 @@ section > h1 {
   font-size: 26pt;
   font-weight: $light-weight;
   margin: 30pt 0 8pt 0;
+
+  em {
+    color: $inactive-color;
+    font-size: 14pt;
+    font-weight: $thin-weight;
+  }
 }
 
 section > p {
@@ -174,12 +180,12 @@ ul li {
   position: relative;
 
   & > p:nth-child(1) {
-    padding-bottom: 4pt;
+    padding-bottom: 6pt;
     line-height: 21.6pt;
   }
 
   & > p:nth-child(2) {
-    padding-bottom: 16pt;
+    padding-bottom: 20pt;
     line-height: 20pt;
 
     -moz-font-feature-settings: "lnum" 1;
@@ -204,7 +210,7 @@ ul li {
 }
 
 footer {
-  padding: 80pt 0 20pt 0;
+  padding: 50pt 0 20pt 0;
   text-align: center;
   font-size: 16pt;
   font-weight: $thin-weight;
