@@ -1,5 +1,5 @@
-$active-color: #6fc;
-$inactive-color: #ccc;
+$active-color: #428bca;
+$inactive-color: #bbb;
 $thin-weight: 100;
 $light-weight: 300;
 $regular-weight: 400;
@@ -48,7 +48,7 @@ a[href^=tel] {
 
 html {
   font-size: 18pt;
-  font-family: 'calluna', times, serif;
+  font-family: calluna, times, serif;
   font-weight: $regular-weight;
   color: #000;
 }
@@ -65,7 +65,7 @@ article {
 }
 
 header, footer, h1, aside {
-  font-family: 'proxima-nova', verdana, sans-serif;
+  font-family: proxima-nova, verdana, sans-serif;
 }
 
 aside {
@@ -84,12 +84,12 @@ aside {
     font-size: 14pt;
   }
 
-  -moz-font-feature-settings: "lnum" 1, "tnum" 1;
-  -moz-font-feature-settings: "lnum=1, tnum=1";
-  -ms-font-feature-settings: "lnum" 1, "tnum" 1;
-  -o-font-feature-settings: "lnum" 1, "tnum" 1;
-  -webkit-font-feature-settings: "lnum" 1, "tnum" 1;
-  font-feature-settings: "lnum" 1, "tnum" 1;
+  -moz-font-feature-settings: 'lnum' 1, 'tnum' 1;
+  -moz-font-feature-settings: 'lnum=1, tnum=1';
+  -ms-font-feature-settings: 'lnum' 1, 'tnum' 1;
+  -o-font-feature-settings: 'lnum' 1, 'tnum' 1;
+  -webkit-font-feature-settings: 'lnum' 1, 'tnum' 1;
+  font-feature-settings: 'lnum' 1, 'tnum' 1;
 
   font-weight: $light-weight;
   white-space: nowrap;
@@ -165,7 +165,7 @@ section > h1 {
   em {
     color: $inactive-color;
     font-size: 14pt;
-    font-weight: $thin-weight;
+    font-weight: $light-weight;
   }
 }
 
@@ -188,12 +188,12 @@ ul li {
     padding-bottom: 20pt;
     line-height: 20pt;
 
-    -moz-font-feature-settings: "lnum" 1;
-    -moz-font-feature-settings: "lnum=1";
-    -ms-font-feature-settings: "lnum" 1;
-    -o-font-feature-settings: "lnum" 1;
-    -webkit-font-feature-settings: "lnum" 1;
-    font-feature-settings: "lnum" 1;
+    -moz-font-feature-settings: 'lnum' 1;
+    -moz-font-feature-settings: 'lnum=1';
+    -ms-font-feature-settings: 'lnum' 1;
+    -o-font-feature-settings: 'lnum' 1;
+    -webkit-font-feature-settings: 'lnum' 1;
+    font-feature-settings: 'lnum' 1;
   }
 
   strong {
@@ -213,7 +213,7 @@ footer {
   padding: 50pt 0 20pt 0;
   text-align: center;
   font-size: 16pt;
-  font-weight: $thin-weight;
+  font-weight: $light-weight;
 
   p:first-child {
     padding-bottom: 15pt;
@@ -228,12 +228,6 @@ footer {
 #windows {
   aside {
     &.inactive {
-      font-weight: $light-weight;
-    }
-  }
-
-  section > h1 {
-    em {
       font-weight: $light-weight;
     }
   }
