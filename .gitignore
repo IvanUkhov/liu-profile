@@ -3,6 +3,6 @@
 .sass-cache
 Gemfile.lock
 public/publications/*.pdf
-public/presentations/*.pdf
+public/talks/*.pdf
 public/*.css
 public/*.html
