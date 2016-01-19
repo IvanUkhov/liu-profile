@@ -2,7 +2,5 @@
 .DS_Store
 .sass-cache
 Gemfile.lock
-public/publications/*.pdf
-public/talks/*.pdf
 public/*.css
 public/*.html
