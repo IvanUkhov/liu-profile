@@ -1,5 +1,5 @@
 $active-color: #00cfb6;
-$inactive-color: #bbb;
+$inactive-color: #ccc;
 $thin-weight: 100;
 $light-weight: 300;
 $regular-weight: 400;
@@ -85,7 +85,6 @@ aside {
   }
 
   -moz-font-feature-settings: 'lnum' 1, 'tnum' 1;
-  -moz-font-feature-settings: 'lnum=1, tnum=1';
   -ms-font-feature-settings: 'lnum' 1, 'tnum' 1;
   -o-font-feature-settings: 'lnum' 1, 'tnum' 1;
   -webkit-font-feature-settings: 'lnum' 1, 'tnum' 1;
@@ -96,15 +95,10 @@ aside {
 
   &.inactive {
     color: $inactive-color;
-    font-weight: $thin-weight;
-  }
-
-  p:first-child {
-    letter-spacing: 1pt;
   }
 
   p:last-child {
-    font-size: 12.5pt;
+    font-size: 12pt;
   }
 }
 
@@ -161,12 +155,6 @@ section > h1 {
   font-size: 26pt;
   font-weight: $light-weight;
   margin: 30pt 0 8pt 0;
-
-  em {
-    color: $inactive-color;
-    font-size: 14pt;
-    font-weight: $light-weight;
-  }
 }
 
 section > p {
@@ -187,13 +175,6 @@ ul li {
   & > p:nth-child(2) {
     padding-bottom: 20pt;
     line-height: 20pt;
-
-    -moz-font-feature-settings: 'lnum' 1;
-    -moz-font-feature-settings: 'lnum=1';
-    -ms-font-feature-settings: 'lnum' 1;
-    -o-font-feature-settings: 'lnum' 1;
-    -webkit-font-feature-settings: 'lnum' 1;
-    font-feature-settings: 'lnum' 1;
   }
 
   strong {
@@ -204,7 +185,6 @@ ul li {
   em {
     font-size: 1rem;
     font-variant: small-caps;
-    letter-spacing: 1pt;
     white-space: nowrap;
   }
 }
@@ -222,13 +202,5 @@ footer {
   em {
     font-size: 58pt;
     font-family: 'Zapf Dingbats', arial, sans-serif;
-  }
-}
-
-#windows {
-  aside {
-    &.inactive {
-      font-weight: $light-weight;
-    }
   }
 }
