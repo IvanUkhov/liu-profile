@@ -1,5 +1,6 @@
-$active-color: #00cfb6;
-$inactive-color: #ccc;
+$main-color: #00cfb6;
+$lowlight-color: #ccc;
+$highlight-color: #fefcdf;
 $thin-weight: 100;
 $light-weight: 300;
 $regular-weight: 400;
@@ -37,12 +38,12 @@ a[href^=tel] {
 }
 
 ::selection {
-  background-color: $active-color;
+  background-color: $main-color;
   color: #fff;
 }
 
 ::-moz-selection {
-  background-color: $active-color;
+  background-color: $main-color;
   color: #fff;
 }
 
@@ -61,7 +62,7 @@ html {
 article {
   padding: 0 30pt;
   margin-left: 100pt;
-  border-right: 100pt solid $active-color;
+  border-right: 100pt solid $main-color;
 }
 
 header, footer, h1, aside {
@@ -93,8 +94,8 @@ aside {
   font-weight: $light-weight;
   white-space: nowrap;
 
-  &.inactive {
-    color: $inactive-color;
+  &.lowlight {
+    color: $lowlight-color;
   }
 
   p:last-child {
@@ -142,7 +143,7 @@ article > header {
     white-space: nowrap;
 
     p {
-      padding-bottom: 6pt;
+      margin-bottom: 6pt;
     }
   }
 
@@ -160,20 +161,24 @@ section > h1 {
 section > p {
   font-size: 1rem;
   line-height: 1.6rem;
-  padding-bottom: 14pt;
+  margin-bottom: 14pt;
 }
 
 ul li {
   font-size: 16pt;
   position: relative;
 
+  &:target {
+    background: $highlight-color;
+  }
+
   & > p:nth-child(1) {
-    padding-bottom: 6pt;
+    margin-bottom: 6pt;
     line-height: 21.6pt;
   }
 
   & > p:nth-child(2) {
-    padding-bottom: 20pt;
+    margin-bottom: 20pt;
     line-height: 20pt;
   }
 
@@ -196,7 +201,7 @@ footer {
   font-weight: $light-weight;
 
   p:first-child {
-    padding-bottom: 15pt;
+    margin-bottom: 15pt;
   }
 
   em {
