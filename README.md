@@ -1,3 +1,3 @@
-# Profile
+# Research
 
-The source code of [this](https://www.ida.liu.se/~ivauk83/) page.
+The source code of [this](https://www.ida.liu.se/~ivauk83) page.
