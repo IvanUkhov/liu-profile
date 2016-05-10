@@ -12,10 +12,9 @@
     %meta{ property: 'profile:gender', content: 'male' }
     %title Ivan Ukhov | Research
     %link{ href: "application.css?#{stamp}", rel: 'stylesheet' }
-    %script{ src: '//use.typekit.net/bas4cfe.js' }
+    %script{ src: '//use.typekit.net/bas4cfe.js', async: true, onload: 'try{Typekit.load();}catch(e){}' }
     %script
       :plain
-        try{Typekit.load();}catch(e){}
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
