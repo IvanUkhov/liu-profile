@@ -34,14 +34,19 @@
             %p +46 (0) 13 281470
             %p Office 329:228, Building B,<br/>Campus Valla, Linköping
 
-          %aside.right <a href="#{encode('mailto:ivan.ukhov@liu.se')}">contact</a>
+          %aside.right
+            %a{ href: "#{encode('mailto:ivan.ukhov@liu.se')}" } contact
 
         %section{ id: 'research-interests' }
-          %h1 Research Interests
+          %h1
+            %a{ href: '#research-interests' } Research Interests
+
           %p Uncertainty quantification for electronic-system design
 
         %section{ id: 'publications' }
-          %h1 Publications
+          %h1
+            %a{ href: '#publications' } Publications
+
           %ul
             %li{ id: 'TRAO-VLSI-2015' }
               :markdown
@@ -87,7 +92,9 @@
                 %a{ href: 'publications/SDTA-DAC-2012.bib' } cite
 
         %section{ id: 'talks' }
-          %h1 Talks
+          %h1
+            %a{ href: '#talks' } Talks
+
           %ul
             %li{ id: '2016-10-FLWP' }
               :markdown
@@ -231,7 +238,9 @@
                 %a{ href: 'talks/2011-12-SDTA.pdf' } slide
 
         %section{ id: 'education' }
-          %h1 Education
+          %h1
+            %a{ href: '#education' } Education
+
           %ul
             %li
               :markdown
@@ -266,7 +275,8 @@
               %aside.left 2008
 
         %section{ id: 'teaching-assistance' }
-          %h1 Teaching Assistance
+          %h1
+            %a{ href: '#teaching-assistance' } Teaching Assistance
 
           %ul
             %li
