@@ -1,4 +1,6 @@
-$main-color: #ff6442;
+$default-main-color: #687f91;
+$main-colors: #00b3e7, #0cc7d3, #00cfb6, #ff6442, #8781d3, #fcf05f, #687f91;
+
 $lowlight-color: #ccc;
 $highlight-color: #fefcdf;
 $thin-weight: 100;
@@ -29,12 +31,12 @@ a[href^=tel] {
 }
 
 ::selection {
-  background-color: $main-color;
+  background-color: $default-main-color;
   color: #fff;
 }
 
 ::-moz-selection {
-  background-color: $main-color;
+  background-color: $default-main-color;
   color: #fff;
 }
 
@@ -53,7 +55,7 @@ html {
 article {
   padding: 0 30pt;
   margin-left: 100pt;
-  border-right: 100pt solid $main-color;
+  border-right: 100pt solid $default-main-color;
 }
 
 header, footer, h1, aside {
@@ -212,5 +214,21 @@ footer {
   em {
     font-size: 58pt;
     font-family: 'Zapf Dingbats', arial, sans-serif;
+  }
+}
+
+@for $i from 1 through length($main-colors) {
+  .theme-#{$i} {
+    ::selection {
+      background-color: nth($main-colors, $i);
+    }
+
+    ::-moz-selection {
+      background-color: nth($main-colors, $i);
+    }
+
+    article {
+      border-right-color: nth($main-colors, $i);
+    }
   }
 }
