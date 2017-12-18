@@ -1,7 +1,6 @@
 $default-main-color: #687f91;
 $main-colors: #00b3e7, #0cc7d3, #00cfb6, #ff6442, #8781d3, /* #fcf05f, */ #687f91;
 
-$lowlight-color: #ccc;
 $highlight-color: #fefcdf;
 $thin-weight: 100;
 $light-weight: 300;
@@ -86,10 +85,6 @@ aside {
 
   font-weight: $light-weight;
   white-space: nowrap;
-
-  &.lowlight {
-    color: $lowlight-color;
-  }
 
   p:last-child {
     font-size: 12pt;
