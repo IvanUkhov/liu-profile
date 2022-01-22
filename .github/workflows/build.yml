@@ -10,18 +10,17 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
 
-      - name: Configure Ruby
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.3.4
           bundler-cache: true
 
       - name: Build the site
-        run: |
-          RAIL_ENV=production bundle exec rake assets
+        run: make build
 
       - name: Deploy the site
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           branch: gh-pages
           folder: public
