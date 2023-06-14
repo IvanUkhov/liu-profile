@@ -40,8 +40,8 @@ a[href^=tel] {
 }
 
 html {
-  font-size: 18pt;
-  font-family: calluna, times, serif;
+  font-size: 16pt;
+  font-family: proxima-sera, times, serif;
   font-weight: $regular-weight;
   color: #000;
 }
@@ -85,10 +85,6 @@ aside {
 
   font-weight: $light-weight;
   white-space: nowrap;
-
-  p:last-child {
-    font-size: 12pt;
-  }
 
   a, a:hover, a:visited {
     color: #fff;
@@ -165,13 +161,11 @@ section > h1 {
 }
 
 section > p {
-  font-size: 1rem;
   line-height: 1.6rem;
   margin-bottom: 14pt;
 }
 
 ul li {
-  font-size: 16pt;
   position: relative;
 
   & > p:nth-child(1) {
@@ -185,13 +179,11 @@ ul li {
   }
 
   strong {
-    font-size: 1rem;
     font-style: italic;
   }
 
   em {
-    font-size: 1rem;
-    font-variant: small-caps;
+    font-style: italic;
     white-space: nowrap;
   }
 }
@@ -199,7 +191,6 @@ ul li {
 footer {
   padding: 50pt 0 20pt 0;
   text-align: center;
-  font-size: 16pt;
   font-weight: $light-weight;
 
   p:first-child {
@@ -207,7 +198,7 @@ footer {
   }
 
   em {
-    font-size: 58pt;
+    font-size: 3rem;
     font-family: 'Zapf Dingbats', arial, sans-serif;
   }
 }
